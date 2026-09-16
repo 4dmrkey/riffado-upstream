@@ -12,6 +12,7 @@
 
 ### Changed
 - Migration `0036_wide_raider` upgrades `stripe_webhook_events` to a durable Stripe event inbox. Inert on self-host unless hosted billing is configured.
+- Removes optional `RYBBIT_SITE_ID` / `RYBBIT_HOST` and the `/api/int/*` analytics proxy. Adds optional `.env.example` vars `OA_TRACKING_KEY` / `OA_HOST` for hosted-only cookieless Open Analytics. Inert unless `IS_HOSTED=true`.
 
 ### Security
 - Official `docker-compose.yml` publishes Postgres on `127.0.0.1:5432` only.
